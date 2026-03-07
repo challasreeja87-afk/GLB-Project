@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FindYourNextAnimeToday</title>
+<link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+
+<header>
+    <a href="index3.html" class="logo-container">
+        <img src="logo.jpg" alt="Logo" class="logo-image">
+        <div class="logo-text">FY<span>N</span>AT</div>
+    </a>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="genre.html">Genres</a></li>
+            <li><a href="popu.html">Popular</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-search">
+        <input type="text" id="searchInput" placeholder="Search anime...">
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Search Your Next Anime</h1>
+    <p>Explore Action, Romance, Fantasy & more</p>
+    <button onclick="location.href='home.html'">Explore Now</button>
+</section>
+
+<section class="featured">
+    <h2>Trending Now</h2>
+
+    <div class="slider-container">
+
+        <!-- LEFT BUTTON -->
+        <button class="slide-btn left" onclick="slideLeft()">❮</button>
+
+        <!-- CARDS CONTAINER -->
+        <div class="anime-cards" id="cardSlider">
+
+            <!-- JUJUTSU KAISEN -->
+            <div class="card" onclick="openModal(
+            'Jujutsu Kaisen',
+            'Action, Supernatural',
+            'Ongoing',
+            'A boy swallows a cursed talisman — the finger of a demon — and becomes cursed himself. He enters a shaman\'s school to locate the demon\'s remaining body parts and exorcise himself.',
+            'https://www.youtube.com/embed/pkKu9hLT-t8'
+            )">
+                <img src="jjk.jpg" alt="Jujutsu Kaisen">
+                <h3>Jujutsu Kaisen</h3>
+                <div class="card-overlay">View Details</div>
+            </div>
+
+            <!-- ONE PIECE -->
+            <div class="card" onclick="openModal(
+            'One Piece',
+            'Adventure, Fantasy',
+            'Ongoing',
+            'Monkey D. Luffy, a pirate with rubber powers, forms the Straw Hat crew and sails the Grand Line, battling rivals and the World Government on a quest for the legendary treasure One Piece and the title of Pirate King.',
+            'https://www.youtube.com/embed/1KMcoJBMWE4'
+            )">
+                <img src="onepiece.jpg" alt="One Piece">
+                <h3>One Piece</h3>
+                <div class="card-overlay">View Details</div>
+            </div>
+
+            <!-- DEMON SLAYER -->
+            <div class="card" onclick="openModal(
+            'Demon Slayer',
+            'Action, Historical',
+            'Ongoing',
+            'The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.',
+            'https://www.youtube.com/embed/VQGCKyvzIM4'
+            )">
+                <img src="demonslayer.jpg" alt="Demon Slayer">
+                <h3>Demon Slayer</h3>
+                <div class="card-overlay">View Details</div>
+            </div>
+
+            <!-- HELLS PARADISE -->
+            <div class="card" onclick="openModal(
+            'Hell\'s Paradise',
+            'Dark Fantasy, Action',
+            'Completed',
+            'A squad of prisoners and their guards are sent to investigate a mysterious island. They get stranded there and must rely on each other to survive the island\'s mysterious and monstrous residents.',
+            'https://www.youtube.com/embed/aaHZdwPZX6g'
+            )">
+                <img src="hellsparadise.jpg" alt="Hell's Paradise">
+                <h3>Hell’s Paradise</h3>
+                <div class="card-overlay">View Details</div>
+            </div>
+
+            <!-- ATTACK ON TITAN -->
+            <div class="card" onclick="openModal(
+            'Attack on Titan',
+            'Action, Historical',
+            'Completed',
+            'In a world where humanity shelters behind towering walls from man-eating Titans, a determined teen joins the elite Survey Corps to fight the giants and uncover the secrets of their origin.',
+            'https://www.youtube.com/embed/MGRm4IzK1SQ'
+            )">
+                <img src="attackontitan.jpg" alt="Attack on Titan">
+                <h3>Attack On Titan</h3>
+                <div class="card-overlay">View Details</div>
+            </div>
+
+            <!-- NARUTO -->
+            <div class="card" onclick="openModal(
+            'Naruto',
+            'Action, Adventure',
+            'Completed',
+            'Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming the Hokage, the village\'s leader and strongest ninja.',
+            'https://www.youtube.com/embed/22R0j8UKRzY'
+            )">
+                <img src="naruto.jpg" alt="Naruto">
+                <h3>Naruto</h3>
+                <div class="card-overlay">View Details</div>
+            </div>
+
+            <!-- SOLO LEVELING -->
+            <div class="card" onclick="openModal(
+            'Solo Leveling',
+            'Action, Fantasy',
+            'Ongoing',
+            'In a world where hunters battle deadly monsters, Sung Jin-Woo gains a mysterious system that allows him to level up infinitely, becoming humanity’s strongest hunter.',
+            'https://www.youtube.com/embed/OdQrlp3uYQM'
+            )">
+                <img src="sololeveling.jpg" alt="Solo Leveling">
+                <h3>Solo Leveling</h3>
+                <div class="card-overlay">View Details</div>
+            </div>
+
+            <!-- GACHIAKUTA -->
+            <div class="card" onclick="openModal(
+            'Gachiakuta',
+            'Action, Fantasy',
+            'Ongoing',
+            'Rudo lives in the slums where the discarded waste of society is thrown. After being falsely accused of murder, he is cast into the Abyss, where he must survive and uncover the truth.',
+            'https://www.youtube.com/embed/yeRvDchyo44'
+            )">
+                <img src="gachiakuta.jpg" alt="Gachiakuta">
+                <h3>Gachiakuta</h3>
+                <div class="card-overlay">View Details</div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT BUTTON -->
+        <button class="slide-btn right" onclick="slideRight()">❯</button>
+
+    </div>
+</section>
+
+<!-- MODAL -->
+<div id="animeModal" class="modal">
+  <div class="modal-content">
+
+    <span class="close-btn" onclick="closeModal()">✖</span>
+
+    <h2 id="animeTitle"></h2>
+
+    <p class="anime-meta">
+      <span id="animeGenre"></span> • 
+      <span id="animeStatus"></span>
+    </p>
+
+    <p id="animeDescription" class="anime-description"></p>
+
+    <button id="watchTrailerBtn" class="trailer-btn">
+      ▶ Watch Trailer
+    </button>
+
+    <div id="trailerWrapper" class="trailer-wrapper">
+      <span class="close-trailer" onclick="closeTrailer()">✖</span>
+      <iframe
+        id="trailerFrame"
+        src=""
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+let currentTrailer = "";
+
+function openModal(title, genre, status, description, trailerLink) {
+  document.getElementById("animeTitle").innerText = title;
+  document.getElementById("animeGenre").innerText = genre;
+  document.getElementById("animeStatus").innerText = status;
+  document.getElementById("animeDescription").innerText = description;
+
+  currentTrailer = trailerLink;
+
+  document.getElementById("animeModal").classList.add("active");
+  document.body.style.overflow = "hidden";
+
+  document.getElementById("trailerWrapper").style.display = "none";
+  document.getElementById("trailerFrame").src = "";
+  document.getElementById("watchTrailerBtn").style.display = "inline-block";
+}
+
+function closeModal() {
+  document.getElementById("animeModal").classList.remove("active");
+  document.body.style.overflow = "auto";
+  closeTrailer();
+}
+
+document.getElementById("watchTrailerBtn").addEventListener("click", function() {
+  if (currentTrailer !== "") {
+
+    let url = currentTrailer;
+
+    // If URL already has ?, use &
+    if (url.includes("?")) {
+      url += "&autoplay=1&rel=0";
+    } else {
+      url += "?autoplay=1&rel=0";
+    }
+
+    document.getElementById("trailerFrame").src = url;
+    document.getElementById("trailerWrapper").style.display = "block";
+    this.style.display = "none";
+  }
+});
+
+function closeTrailer() {
+  document.getElementById("trailerFrame").src = "";
+  document.getElementById("trailerWrapper").style.display = "none";
+  document.getElementById("watchTrailerBtn").style.display = "inline-block";
+}
+
+document.getElementById("animeModal").addEventListener("click", function(e){
+  if(e.target === this){
+    closeModal();
+  }
+});
+
+document.getElementById("searchInput").addEventListener("keyup", function() {
+  let value = this.value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    let title = card.querySelector("h3").innerText.toLowerCase();
+    card.style.display = title.includes(value) ? "block" : "none";
+  });
+});
+
+function slideLeft() {
+  document.getElementById("cardSlider").scrollBy({
+    left: -300,
+    behavior: "smooth"
+  });
+}
+
+function slideRight() {
+  document.getElementById("cardSlider").scrollBy({
+    left: 300,
+    behavior: "smooth"
+  });
+}
+
+</script>
+
+<footer class="footer"> 
+
+<div class="footer-top"> 
+<div class="footer-logo">  
+<h1>FY<span>N</span>AT</h1> 
+</div> <div class="footer-links">
+ <a href="home.html">Home</a> <a href="genre.html">Genres</a> 
+<a href="popu.html">Popular</a> 
+</div> 
+</div> 
+<hr> <div class="footer-bottom"> 
+<p>© 2026 FYNAT. All rights reserved.</p>
+ </div>
+ 
+</footer>
+
+</body>
+</html>
